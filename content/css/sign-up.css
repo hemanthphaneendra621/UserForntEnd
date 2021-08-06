@@ -1,0 +1,118 @@
+.signupContent{
+    display: flex;
+    box-shadow: 5px 10px white;
+    width:75%;
+    margin-left:200px;
+    margin-top:30px;
+}
+.signupImage{
+    width: 88%;
+    border-radius: 2px;
+}
+.signupForm{
+    margin-right: 250px;
+}
+.flex{
+    display: flex;
+}
+.firstName{
+    width:150px
+}
+.firstNameMessage{
+    color:red;
+    display:block;
+    text-align:center;
+    font-size:xx-small
+}
+.lastName{
+    width:150px;
+    margin-left: 15px;
+}
+.lastNameMessage{
+    color:red;
+    display:block;
+    text-align:center;
+    font-size:xx-small;
+}
+.emailMessage{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:x-small
+}
+.phoneNumberMessage{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:small;
+}
+.address1{
+    width:150px;
+}
+.address1Message{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:xx-small
+}
+.address2{
+    width:150px;
+    margin-left: 15px;
+}
+.address2Message{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:xx-small;
+}
+.country{
+    width:150px;
+}
+.state{
+    width:150px;
+    margin-left: 15px;
+}
+.city{
+    width: 150px;
+}
+.pinCode{
+    width: 150px;
+    margin-left: 15px;
+}
+.pinCodeMessage{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:xx-small
+}
+.passwordMessage{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:small
+}
+.red{
+    color:red;
+}
+.emptyspace{
+    width:100px
+}
+.resetButton{
+    width:100px;
+}
+.submitButton{
+    width:100px;
+    margin-left:15px
+}
+.signInBox{
+    border:2px solid #ededf0;
+    border-radius: 10px;
+    width:355px;
+    text-align:center;
+    margin-top: 20px;
+    margin-left:350px
+}
+.signInLink{
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+}

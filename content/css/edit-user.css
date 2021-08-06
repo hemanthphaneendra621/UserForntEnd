@@ -1,0 +1,48 @@
+.editUserForm{
+    margin-left:400px;
+    margin-top:70px
+}
+.flex{
+    display: flex;
+}
+.editfirstName{
+    width:150px;
+}
+.editFirstNameMessage{
+    color:red;
+    display:block;
+    text-align:center;
+    font-size:xx-small
+}
+.editlastName{
+    width:150px;
+    margin-left: 15px;
+}
+.editLastNameMessage{
+    color:red;
+    display:block;
+    text-align:center;
+    font-size:xx-small
+}
+.editphoneNumber{
+    width:315px
+}
+.editPhoneMessage{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:small
+}
+.editaddress1{
+    width:150px;
+}
+.editaddress1Message{
+    color:red;
+    display:block;
+    margin-left:2px;
+    font-size:xx-small
+}
+.editaddress2{
+    width:150px;
+    margin-left: 15px;
+}

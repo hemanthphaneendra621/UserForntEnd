@@ -1,0 +1,119 @@
+input[type=email],[type=password],[type=text],select {
+    width: 100%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height:35px;
+  }
+  
+  .signInSubmit:hover{
+    background-color: #45a049;
+  }
+  .submit {
+    width: 100%;
+    background-color:orange;
+    box-shadow: 2px 2px 2px 2px rgb(226, 225, 225);
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 35px;
+    text-align: center;
+  }
+  
+  .submit:hover {
+    background-color:rgb(255, 136, 0);
+  }
+  input[type=reset] {
+    width: 100%;
+    background-color:white;
+    color: black;
+    box-shadow: 2px 2px 2px 2px rgb(226, 225, 225);
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 35px;
+    text-align: center;
+  }
+  .cancel{
+    width: 100%;
+    background-color:white;
+    color: black;
+    box-shadow: 2px 2px 2px 2px rgb(226, 225, 225);
+    margin: 8px 0;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 35px;
+    text-align: center;
+  }
+  .content {
+    border-radius: 5px;
+    background-color:#f7fcfe;
+    padding: 20px;
+    width:320px;
+    border-radius: 7px;
+  }
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border:2px solid red;
+}
+input[disabled="disabled"]{
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}  
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

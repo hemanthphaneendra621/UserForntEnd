@@ -1,0 +1,36 @@
+#products {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left:5%;
+    padding: 5px;
+}
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+#products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+.productName{
+    width:15%;
+}
+.category{
+    width:15%;
+}
+.price{
+    width:10%
+}
+.stock{
+    width:10%;
+}
+.description{
+    width:30%;
+}
+.productManufacturer{
+    width:20%;
+}

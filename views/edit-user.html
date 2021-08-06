@@ -1,0 +1,98 @@
+<header ng-include="'header.html'"></header>
+<div class="editUserForm">
+  <form ng-submit="userUpdate()" name="updateForm">
+    <div class="flex">
+      <div class="editfirstName">
+        <input type="text" placeholder="First Name" 
+               name="firstName" ng-model="user.firstName" 
+               ng-required="true" ng-pattern="firstName"/><br>
+          <span ng-show="updateForm.firstName.$touched && updateForm.firstName.$error.pattern">
+            <small class="editFirstNameMessage">
+              First Name should contain atleast 3 characters
+            </small>
+          </span>       
+      </div>
+      <div class="editlastName">
+        <input type="text" placeholder="Last Name" 
+               name="lastName" ng-model="user.lastName" 
+               ng-required="true" ng-pattern="lastName"/><br>
+          <span ng-show="updateForm.lastName.$touched && updateForm.lastName.$error.pattern">
+            <small class="editLastNameMessage">
+              Last Name should contain 3 characters
+            </small>
+          </span>
+      </div>
+    </div>
+    <input type="email" placeholder="email" 
+           ng-model="user.emailAddress" style="width:315px"
+           ng-disabled="true"/><br>
+    <input type="text" placeholder="Phone Number" 
+           name="phoneNumber" ng-model="user.phoneNumber" 
+           ng-required="true" ng-pattern="phoneNumber" class="editphoneNumber"/><br>
+      <span ng-show="updateForm.phoneNumber.$touched && updateForm.phoneNumber.$error.pattern">
+        <small class="editPhoneMessage">
+          Phone Number Should Contain 10 Numbers
+        </small>
+      </span>         
+    <div class="flex">
+      <div class="editaddress1">
+        <input type="text" placeholder="Address1" 
+               name="address1" ng-model="user.address1" 
+               ng-required="true" ng-pattern="address1"/><br>
+          <span ng-show="updateForm.address1.$touched && updateForm.address1.$error.pattern">
+            <small class="editaddress1Message">
+              Address1 Should contain atleast 3 characters</small>
+            </span>  
+      </div>
+      <div class="editaddress2">
+        <input type="text" placeholder="Address2" 
+              name="address2" ng-model="user.address2" 
+              ng-required="true" ng-pattern="address2"/><br>  
+          <span ng-show="updateForm.address2.$touched && updateForm.address2.$error.pattern">
+            <small style="color:red;display:block;margin-left:2px;font-size:xx-small">
+              Address2 Should contain atleast 3 characters
+            </small>
+          </span>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="width:150px">
+        <select id="country" ng-model="user.country" 
+                ng-options="country as country for (country, states) in countries" 
+                ng-change="GetSelectedCountry()" ng-required="true">
+          <option value=''>Country</option>
+        </select>
+      </div>
+      <div style="width:150px;margin-left: 15px;">
+        <select id="state" ng-disabled="!user.country" ng-model="user.state" 
+                ng-options="state as state for (state,city) in countries[user.country]" 
+                ng-change="GetSelectedState()" ng-required="true">
+          <option value=''>State</option>
+        </select>
+      </div>
+    </div>
+    <div class="flex">
+      <div style="width: 150px;">
+        <select id="city" ng-disabled="!user.country || !user.state" ng-model="user.city" 
+                ng-options="city as city for city in countries[user.country][user.state]" ng-required="true">
+          <option value=''>City</option>
+            </select><br>
+      </div>
+      <div style="width: 150px;margin-left: 15px;">
+        <input type="text" placeholder="pinCode" name="pinCode" ng-model="user.postalCode" ng-required="true" ng-pattern="pinCode"/><br>
+          <span ng-show="updateForm.pinCode.$touched && updateForm.pinCode.$error.pattern">
+            <small style="color:red;display:block;margin-left:2px;font-size:xx-small">PinCode Should contain 6 numbers</small>
+          </span>   
+      </div>
+    </div>
+    <div class="flex">
+      <div style="width:100px"></div>
+        <div style="width:100px;">
+          <input type="submit" class="cancel" value="CANCEL" ng-click="cancelEdit()"/>
+        </div>
+      <div style="width:100px;margin-left:15px">
+        <input type="submit" class="submit" value="UPDATE" ng-disabled="updateForm.$pristine || updateForm.$invalid" />
+      </div>
+    </div>
+  </form> 
+</div>

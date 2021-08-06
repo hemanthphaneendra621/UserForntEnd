@@ -1,0 +1,143 @@
+<div class="signupContent">
+  <div>
+    <img src="content\img\photo.jpg" alt="sign up image" class="signupImage">
+  </div>
+  <div class="signupForm">
+    <form ng-submit="userSignUp()" name="SignUp" noValidate>
+      <div class="flex">
+        <div class="firstName">
+          <input type="text" placeholder="First Name" 
+                  name="firstName" ng-model="user.firstName" 
+                  ng-required="true" ng-pattern="firstName"/><br>
+            <span ng-show="SignUp.firstName.$touched && SignUp.firstName.$error.pattern">
+              <small class="firstNameMessage">
+                First Name should contain 3 characters
+              </small>
+            </span>
+        </div>
+        <div class="lastName">
+          <input type="text" placeholder="Last Name" 
+                name="lastName" ng-model="user.lastName" 
+                ng-required="true" ng-pattern="lastName"/><br>
+            <span ng-show="SignUp.lastName.$touched && SignUp.lastName.$error.pattern">
+              <small class="lastNameMessage">
+                Last Name should contain 3 characters
+              </small>
+            </span>
+        </div>
+      </div>
+      <input type="email" placeholder="email" 
+              name="email" ng-model="user.email" 
+              ng-required="true" ng-pattern="email"/><br>
+        <span ng-show="SignUp.email.$touched && SignUp.email.$error.pattern">
+          <small class="emailMessage">
+            email should contain at least one character before and after "@" symbol
+          </small>
+        </span>
+      <input type="text" placeholder="Phone Number" 
+              name="phoneNumber" ng-model="user.phoneNumber" 
+              ng-required="true" ng-pattern="phoneNumber"/><br>
+        <span ng-show="SignUp.phoneNumber.$touched && SignUp.phoneNumber.$error.pattern">
+          <small class="phoneNumberMessage">
+            Phone Number Should Contain 10 Numbers
+          </small>
+        </span>
+      <div class="flex">
+        <div class="address1">
+          <input type="text" placeholder="Address1" 
+                  name="address1" ng-model="user.address1" 
+                  ng-required="true" ng-pattern="address1"/><br>
+            <span ng-show="SignUp.address1.$touched && SignUp.address1.$error.pattern">
+              <small class="address1Message">
+                Address1 Should contain atleast 3 characters
+              </small>
+            </span>  
+        </div>
+        <div class="address2">
+          <input type="text" placeholder="Address2" 
+                  name="address2" ng-model="user.address2" 
+                  ng-required="true" ng-pattern="address2"/><br>  
+            <span ng-show="SignUp.address2.$touched && SignUp.address2.$error.pattern">
+              <small class="address2Message">
+                Address2 Should contain atleast 3 characters
+              </small>
+            </span> 
+        </div>
+      </div>
+      <div class="flex">
+        <div class="country">
+          <select id="country" ng-model="user.country" 
+                  ng-options="country as country for (country, states) in countries" 
+                  ng-change="GetSelectedCountry()" ng-required="true">
+            <option value=''>Country</option>
+          </select>
+        </div>
+        <div class="state">
+          <select id="state" ng-disabled="!user.country" ng-model="user.state" 
+                  ng-options="state as state for (state,city) in countries[user.country]" 
+                  ng-change="GetSelectedState()" ng-required="true">
+            <option value=''>State</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="city">
+          <select id="city" ng-disabled="!user.country || !user.state" ng-model="user.city" 
+                  ng-options="city as city for city in countries[user.country][user.state]" 
+                  ng-required="true">
+            <option value=''>City</option>
+          </select><br>
+        </div>
+        <div class="pinCode">
+          <input type="text" placeholder="pinCode" 
+                 name="pinCode" ng-model="user.pinCode" 
+                 ng-required="true" ng-pattern="pinCode"/><br>
+            <span ng-show="SignUp.pinCode.$touched && SignUp.pinCode.$error.pattern">
+              <small class="pinCodeMessage">
+                PinCode Should contain 6 numbers
+              </small>
+            </span>   
+        </div>
+      </div>
+      <input type="password" placeholder="password" 
+             ng-model="user.password" name="password" 
+             ng-required="true" ng-pattern="password"/><br>
+        <span ng-show="SignUp.password.$touched && SignUp.password.$error.pattern">
+          <small class="passwordMessage">
+            Password Should contain min length 5
+          </small>
+        </span>  
+      <input type="password" placeholder="confirm password" 
+             name="confirmPassword" compare-to="user.password" 
+             ng-model="user.confirmPassword" ng-required="true" ng-pattern="password"/>
+        <span ng-show="SignUp.confirmPassword.$error.compareTo && 
+                       SignUp.confirmPassword.$touched && 
+                       SignUp.confirmPassword.$error.pattern">
+          <small class="passwordMessage">
+            Confirm Password Should contain min length 5
+          </small>
+        </span>  
+        <div ng-show="user.password != user.confirmPassword &&
+                      SignUp.confirmPassword.$dirty" class="red">
+          Passwords do not match
+        </div>
+      <div class="flex">
+        <div class="emptyspace"></div>
+        <div class="resetButton">
+          <input type="reset" ng-click="userreset()"/>
+        </div>
+        <div class="submitButton">
+          <input type="submit" class="submit" ng-disabled="SignUp.$invalid"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="signInBox">
+  <p>Have an Account?&nbsp;&nbsp;
+    <a href="" class="signInLink" ng-click="signIn()">
+      Sign In
+    </a>
+  </p>
+</div>

@@ -1,0 +1,22 @@
+<header ng-include="'header.html'"></header>
+<table id="products" style="margin-top:5%">
+    <tr>
+        <th class="productName">ProductName</td>
+        <th class="category">Category</td>
+        <th class="price">Price</td>
+        <th class="stock">Stock</td>
+        <th class="description">Description</td>
+        <th class="produxtManufacturer">productManufacturer</td>
+    </tr>
+</table>
+<table ng-repeat="product in products" id="products">
+    <tr>
+        <td class="productName">{{product.ProductName}}</td>
+        <td class="category">{{product.Category}}</td>
+        <td class="price">{{product.Price}}</td>
+        <td class="stock">{{product.Stock}}</td>
+        <td class="description">{{product.Description}}</td>
+        <td class="productManufacturer">{{product.productManufacturer}}</td>
+    </tr>
+</table>
+

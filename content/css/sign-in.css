@@ -1,0 +1,44 @@
+.signInContent{
+    margin-top: 10%;
+    margin-left: 30%;
+}
+.errorMessage{
+    color:rgb(250, 77, 77);
+    margin-left: 100px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+.userSignInContent{
+    border-radius: 5px;
+    background-color:#f7fcfe;
+    padding: 20px;
+    width:320px;
+    border-radius: 7px;
+}
+.signInerror{
+    color:red;
+    display:block;
+    text-align:center;
+}
+
+.signInSubmit{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height:30px
+}
+.signupBox{
+    border:2px solid #ededf0;
+    border-radius: 10px;
+    width:355px;
+    text-align: center;
+    margin-top: 20px;
+}
+.signupLink{
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+}
